@@ -1,0 +1,105 @@
+//se nombre una clase
+public class Libro
+{
+    //ATRIBUTOS
+    private int ISBN, numerodepaginas;
+    private string titulo="", autor="";
+
+
+//GET configura informacion
+    public void getISBN()
+    {
+        Console.WriteLine(this.ISBN);
+    }
+    //Get configura informacion
+    public void getnp()
+    {
+        Console.WriteLine(this.numerodepaginas);
+    }
+    //GET configura informacion
+    public void gettitulo()
+    {
+        Console.WriteLine(this.titulo);
+    }
+    //GET configura informacion
+    public void getautor()
+    {
+        Console.WriteLine(this.autor);
+    }
+
+//SET consulta informacion
+    public void setISBN(int ISBN)
+    {
+        this.ISBN=ISBN;
+    }
+    //SET consulta informacion
+    public void setnp(int numerodepaginas)
+    {
+        this.numerodepaginas=numerodepaginas;
+    }
+    //SET consulta informacion
+    public void settitulo(string titulo)
+    {
+        this.titulo=titulo;
+    }
+    //SET consulta informacion
+    public void setautor(String autor)
+    {
+        this.autor=autor;
+        } 
+
+//el ToString lee y muestra en pantalla
+public void Tostring()
+{
+Console.WriteLine ("La novela " + titulo + " del autor " + autor + " tiene " + numerodepaginas + " paginas " + " y su ISBN es " + ISBN);
+}
+//el ToString lee y muestra en pantalla
+public void ToString()
+{
+Console.WriteLine ("La novela " + titulo + " del autor " + autor + " tiene " + numerodepaginas + " paginas " + " y su ISBN es " + ISBN);
+}
+}
+
+//se nombra otra clase
+public class Libreria
+{
+    //indiuca al codigo donde inicia
+    public static void Main(String[] args)
+{
+    //establece una nueva instancia
+ Libro libro_1 = new Libro();
+
+ //configura el nombre del autor  
+ libro_1.setautor("Vladimir Nabokov");
+
+ //configura el titulo de la novela
+ libro_1.settitulo("lolita");
+
+ //consulta el numero de paginas
+ libro_1.setnp(318);
+
+ //consulta el codigo ISBN
+ libro_1.setISBN(97884339);
+
+ //establece una nueva instancia
+ Libro libro_2 = new Libro();
+
+ //configura el nombre del autor 
+ libro_2.setautor("James Joyce");
+
+  //configura el titulo de la novela
+ libro_2.settitulo("Ulises");
+
+ //consulta el numero de paginas
+ libro_2.setnp(311);
+ 
+ //consulta el codigo ISBN
+ libro_2.setISBN(97815599);
+
+ //llama al atributo Tostring
+ libro_1.ToString();
+ //llama al atributo Tostring
+ libro_2.ToString();
+}
+
+}
